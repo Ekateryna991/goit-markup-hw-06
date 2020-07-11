@@ -812,6 +812,11 @@ footer {
 
 .address {
   margin-top: 20px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
 }
 
 .subscription {
@@ -822,11 +827,65 @@ footer {
   margin-bottom: 20px;
 }
 
-.address {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  font-style: normal;
+.footer-action {
+  display: flex;
+}
+
+.form-footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 12px;
+}
+
+.input-footer {
+  width: 358px;
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 16px;
+  background-color: inherit;
+  border-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+}
+
+.email-footer {
+  position: absolute;
+  top: 15px;
+  left: 16px;
+
+  /* background-color: tomato; */
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-footer {
+  color: var(--primary-bg-color);
+  background-color: var(--primary-accent-color);
+  font-family: inherit;
+
+  border-radius: 4px;
+
+  border: 1px solid transparent;
+
+  display: inline-flex;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  width: 200px;
+  height: 50px;
+  padding-left: 29px;
+  padding-top: 10px;
+}
+
+.icon-send {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  align-items: center;
 }
 
 .address-link {
@@ -886,8 +945,8 @@ footer {
 }
 
 .backdrop.is-hidden {
-  /* opacity: 0; */
-  /* pointer-events: none; */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .modal {
@@ -949,12 +1008,15 @@ a .aktcent {
   margin-bottom: 28px;
   display: flex;
   flex-direction: column;
-  /* padding: 12px 16px; */
 }
 
 .form-input {
   height: 40px;
   padding: 12px 42px;
+}
+
+.form-input:in-range {
+  border-color: tomato;
 }
 
 .form-label {
@@ -993,8 +1055,12 @@ a .aktcent {
   transform: translateY(-45px);
 }
 
+.form-field:focus-within > .form-input,
+.form-field:focus-within > .comment {
+  outline: 1px solid var(--primary-accent-color);
+}
+
 .form-input:not(:placeholder-shown) + .form-label {
-  /* color: var(--primary-accent-color); */
   transform: translateY(-45px);
 }
 
