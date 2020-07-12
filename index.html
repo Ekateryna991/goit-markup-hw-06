@@ -62,7 +62,8 @@
           <h1 class="company-title container">
             Эффективные решения для вашего бизнеса
           </h1>
-          <a href="" class="button" data-open-modal>Заказать услугу</a>
+          <button class="button" data-open-modal>Заказать услугу</button>
+          <!-- <a href="" class="button" data-open-modal>Заказать услугу</a> -->
         </div>
       </section>
 
@@ -487,15 +488,12 @@
         <form class="form js-speacker-form">
 
           <label class="form-field">
-          
             <input type="text" class="form-input" name="name" id="name" placeholder=" "  />
             <span class="form-label">Имя</span>
             <svg class="icon-form">
               <use href="./img/sprite.svg#icon-form-person" width=18px height=18px></use>
             </svg>
           </label>
-
-          
 
           <label class="form-field">
             
@@ -520,19 +518,21 @@
             
             <textarea name="comment" class="form-textarea" id="comment" cols="30" rows="10" placeholder=" "></textarea>
             
-            <label for="comment" class="form-label comment">Комментарий</label>
+             <!-- <label for="comment" class="form-label comment">Комментарий</label> --> 
+            <label for="comment" class="comment">Комментарий</label>
           </div>
+        </form>
           
           <label class="policy">
             <input class="checkbox" type="checkbox" name="policy" id="policy" />
             <span class="icon-chek"></span>
             <span>Соглашаюсь с рассылкой и принимаю 
-            <a href="" class="aktcent">Условия договора</a></span>
+            <a href="" class="aktcent decoration">Условия договора</a></span>
           </label>
 
           <button type="submit" class="button submit">Отправить</button>
          
-        </form>
+        
       </div>
     </div>
   
