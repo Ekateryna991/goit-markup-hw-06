@@ -945,8 +945,8 @@ footer {
 }
 
 .backdrop.is-hidden {
-  /* opacity: 0; */
-  /* pointer-events: none; */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .modal {
@@ -1063,24 +1063,26 @@ a .aktcent {
 }
 
 .form-field:focus-within > .form-input,
-.form-field:focus-within > .comment {
+.form-field:focus-within > .form-textarea {
   outline: 1px solid var(--primary-accent-color);
 }
 
-.form-input:not(:placeholder-shown) + .form-label {
+.form-input:not(:placeholder-shown) + .form-label,
+.textarea:not(:placeholder-shown) + .comment {
   transform: translateY(-45px);
 }
 
 /*  */
 
 .form-textarea {
-  height: 40px;
+  height: 120px;
+  width: 448;
   padding: 12px 16px;
 }
 
 .comment {
   position: absolute;
-  top: 50%;
+  top: 24px;
   left: 16px;
   transform: translateY(-50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
