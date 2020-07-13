@@ -318,30 +318,51 @@
             </li>
           </ul>
         </div>
-        <div class="mailing">
+
+        <form class="mailing js-speaker-form">
           <div class="action">
             <b>ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
           </div>
-    
+        
           <div class="footer-action">
             <label class="form-footer">
               <input type="email" class="input-footer" name="email" id="email" />
               <span class="email-footer">E-mail</span>
             </label>
-          
-            <a href="" class="button-footer">
+        
+        
+            <button type="submit" class="button-footer data-open-modal">
               Подписаться
               <svg class="icon-send">
                 <use href="./img/sprite.svg#icon-icon-send-1" width=24 px height=24px></use>
               </svg>
-            </a>
+            </button>
+        
           </div>
-        </div>
+        </form>
+
       </div>
         
           <!-- <p class="developed container"> 
             2020 &#10072; Developed by GoIT Students
           </p>-->
     </footer>
+
+<script>
+  (() => {
+    document
+      .querySelector('.js-speaker-form')
+      .addEventListener('submit', e => {
+        e.preventDefault();
+
+        new FormData(e.currentTarget).forEach((value, name) =>
+          console.log(`${name}: ${value}`),
+        );
+
+        e.currentTarget.reset();
+      });
+  })();
+</script>
+
   </body>
 </html>

@@ -452,25 +452,31 @@
             </li>
           </ul>
         </div>
-        <div class="mailing">
-          <div class="action">
-            <b>ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
-          </div>
 
-          <div class="footer-action">
-            <label class="form-footer">
-            <input type="email" class="input-footer" name="email" id="email" />
-            <span class="email-footer">E-mail</span>
-            </label>
+          
+            <form class="mailing js-speaker-form">
+              <div class="action">
+                <b>ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
+              </div>
 
-            <a href="" class="button-footer">
-              Подписаться
-              <svg class="icon-send">
-                <use href="./img/sprite.svg#icon-icon-send-1" width=24 px height=24px></use>
-              </svg>
-            </a>
-          </div>
-        </div>
+              <div class="footer-action">
+                <label class="form-footer">
+                <input type="email" class="input-footer" name="email" id="email" />
+                <span class="email-footer">E-mail</span>
+                </label>
+
+
+                <button type="submit" class="button-footer data-open-modal">
+                  Подписаться
+                  <svg class="icon-send">
+                    <use href="./img/sprite.svg#icon-icon-send-1" width=24 px height=24px></use>
+                  </svg>
+                </button>
+                
+              </div>
+            </form>
+           
+          
       </div>
     
       <!-- <p class="developed container"> 
@@ -521,7 +527,7 @@
              <!-- <label for="comment" class="form-label comment">Комментарий</label> --> 
             <label for="comment" class="comment">Комментарий</label>
           </div>
-        </form>
+        <!-- </form> -->
           
           <label class="policy">
             <input class="checkbox" type="checkbox" name="policy" id="policy" />
@@ -532,12 +538,28 @@
 
           <button type="submit" class="button submit">Отправить</button>
          
-        
+        </form>
       </div>
     </div>
   
 
     <script src="./css/modal.js"></script>
+
+    <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
     
 
   </body>

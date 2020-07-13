@@ -850,12 +850,21 @@ footer {
 
 .email-footer {
   position: absolute;
-  top: 15px;
+  top: 0px;
   left: 16px;
+
+  /* transform: translateY(-50%); */
+  transform: translateY(15px);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* background-color: tomato; */
 
   color: rgba(255, 255, 255, 0.6);
+}
+
+.form-footer:focus-within > .email-footer {
+  transform: translateY(-25px);
+  /* transform: translate(-24px, -45px); */
 }
 
 .button-footer {
